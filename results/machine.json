@@ -1,0 +1,11 @@
+{
+  "cpu": "Apple M1 Pro",
+  "logicalCpus": 8,
+  "memoryGiB": 16,
+  "os": "macOS 26.6.2",
+  "arch": "arm64",
+  "node": "v25.9.0",
+  "next": "16.3.6",
+  "k6": "k6 v2.3.0 (commit/e088784614, go1.26.8, darwin/arm64)",
+  "note": "k6, the edge proxy and Next.js all ran on this one machine, alongside unrelated background jobs."
+}

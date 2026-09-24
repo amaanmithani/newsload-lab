@@ -1,0 +1,72 @@
+{
+  "scenario": "publish",
+  "config": "edge",
+  "target": {
+    "base": "http://127.0.0.1:8080",
+    "prefix": "/news/"
+  },
+  "startedAt": "2026-09-24T22:06:34.457Z",
+  "finishedAt": "2026-09-24T22:07:14.725Z",
+  "k6ExitCode": 0,
+  "aborted": null,
+  "loadAvg": {
+    "before": [
+      12.81103515625,
+      15.45849609375,
+      14.76708984375
+    ],
+    "peak1m": 16.74951171875,
+    "after": [
+      12.8740234375,
+      15.267578125,
+      14.736328125
+    ]
+  },
+  "origin": {
+    "reads": 1,
+    "writes": 1,
+    "rejected": 0,
+    "inFlight": 0,
+    "peakInFlight": 1,
+    "queued": 0,
+    "peakQueued": 0,
+    "since": "2026-09-24T22:06:34.455Z"
+  },
+  "nextEventLoopLag": {
+    "p50Ms": 11,
+    "p99Ms": 21.4,
+    "maxMs": 167.9
+  },
+  "originConfig": {
+    "latencyMs": 120,
+    "maxConcurrency": 16,
+    "queueTimeoutMs": 2000
+  },
+  "edge": {
+    "requests": 11954,
+    "hit": 11914,
+    "stale": 0,
+    "miss": 1,
+    "coalesced": 39,
+    "pass": 0,
+    "bypass": 0,
+    "staleIfError": 0,
+    "errors": 0,
+    "upstreamFetches": 1,
+    "upstreamErrors": 0,
+    "backgroundRevalidations": 0,
+    "purged": 1,
+    "evicted": 0,
+    "entries": 12,
+    "inflight": 0
+  },
+  "k6Env": {
+    "TARGET_BASE": "http://127.0.0.1:8080",
+    "ARTICLE_PREFIX": "/news/",
+    "LAB_CONFIG": "edge",
+    "HOT_SLUG": "election-results-live",
+    "ADMIN_BASE": "http://127.0.0.1:3000",
+    "K6_NO_USAGE_REPORT": "true"
+  },
+  "k6Summary": "results/publish/edge.k6.json"
+}

@@ -1,0 +1,8 @@
+.next/
+node_modules/
+coverage/
+results/
+.data/
+package-lock.json
+next-env.d.ts
+README.md

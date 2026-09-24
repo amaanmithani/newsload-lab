@@ -1,0 +1,8 @@
+node_modules/
+.next/
+coverage/
+.data/
+*.tsbuildinfo
+next-env.d.ts
+results/**/*.log
+.lab-tmp/

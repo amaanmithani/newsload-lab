@@ -1,0 +1,55 @@
+{
+  "scenario": "steady",
+  "config": "origin",
+  "target": {
+    "base": "http://127.0.0.1:3000",
+    "prefix": "/live/"
+  },
+  "startedAt": "2026-09-24T21:56:47.233Z",
+  "finishedAt": "2026-09-24T21:57:18.182Z",
+  "k6ExitCode": 0,
+  "aborted": null,
+  "loadAvg": {
+    "before": [
+      12.5458984375,
+      15.724609375,
+      14.23046875
+    ],
+    "peak1m": 12.7421875,
+    "after": [
+      11.9365234375,
+      15.23291015625,
+      14.10107421875
+    ]
+  },
+  "origin": {
+    "reads": 2978,
+    "writes": 0,
+    "rejected": 0,
+    "inFlight": 0,
+    "peakInFlight": 16,
+    "queued": 0,
+    "peakQueued": 101,
+    "since": "2026-09-24T21:56:47.231Z"
+  },
+  "nextEventLoopLag": {
+    "p50Ms": 10.3,
+    "p99Ms": 49,
+    "maxMs": 374.9
+  },
+  "originConfig": {
+    "latencyMs": 120,
+    "maxConcurrency": 16,
+    "queueTimeoutMs": 2000
+  },
+  "edge": null,
+  "k6Env": {
+    "TARGET_BASE": "http://127.0.0.1:3000",
+    "ARTICLE_PREFIX": "/live/",
+    "LAB_CONFIG": "origin",
+    "HOT_SLUG": "election-results-live",
+    "ADMIN_BASE": "http://127.0.0.1:3000",
+    "K6_NO_USAGE_REPORT": "true"
+  },
+  "k6Summary": "results/steady/origin.k6.json"
+}

@@ -1,0 +1,55 @@
+{
+  "scenario": "steady",
+  "config": "isr",
+  "target": {
+    "base": "http://127.0.0.1:3000",
+    "prefix": "/news/"
+  },
+  "startedAt": "2026-09-24T21:57:28.583Z",
+  "finishedAt": "2026-09-24T21:57:58.880Z",
+  "k6ExitCode": 0,
+  "aborted": null,
+  "loadAvg": {
+    "before": [
+      11.1708984375,
+      14.96142578125,
+      14.017578125
+    ],
+    "peak1m": 18.87890625,
+    "after": [
+      16.82470703125,
+      15.95703125,
+      14.40869140625
+    ]
+  },
+  "origin": {
+    "reads": 11,
+    "writes": 0,
+    "rejected": 0,
+    "inFlight": 0,
+    "peakInFlight": 3,
+    "queued": 0,
+    "peakQueued": 0,
+    "since": "2026-09-24T21:57:28.582Z"
+  },
+  "nextEventLoopLag": {
+    "p50Ms": 10.5,
+    "p99Ms": 27,
+    "maxMs": 1732.2
+  },
+  "originConfig": {
+    "latencyMs": 120,
+    "maxConcurrency": 16,
+    "queueTimeoutMs": 2000
+  },
+  "edge": null,
+  "k6Env": {
+    "TARGET_BASE": "http://127.0.0.1:3000",
+    "ARTICLE_PREFIX": "/news/",
+    "LAB_CONFIG": "isr",
+    "HOT_SLUG": "election-results-live",
+    "ADMIN_BASE": "http://127.0.0.1:3000",
+    "K6_NO_USAGE_REPORT": "true"
+  },
+  "k6Summary": "results/steady/isr.k6.json"
+}

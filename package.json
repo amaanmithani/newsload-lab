@@ -1,0 +1,45 @@
+{
+  "name": "newsload-lab",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Breaking-News Load Lab: how a news site survives a traffic spike (Next.js ISR + SWR/coalescing edge proxy + k6).",
+  "type": "module",
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "next dev -p 3000",
+    "build": "next build",
+    "start": "next start -p 3000",
+    "proxy": "node proxy/main.ts",
+    "lint": "eslint .",
+    "type-check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "lab:steady": "node scripts/lab.mjs steady",
+    "lab:spike": "node scripts/lab.mjs spike",
+    "lab:publish": "node scripts/lab.mjs publish",
+    "lab:herd": "node scripts/lab.mjs herd",
+    "lab:all": "node scripts/lab.mjs steady && node scripts/lab.mjs spike && node scripts/lab.mjs publish && node scripts/lab.mjs herd",
+    "results:render": "node scripts/render-results.mjs",
+    "results:check": "node scripts/render-results.mjs --check"
+  },
+  "dependencies": {
+    "next": "^16.3.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitest/coverage-v8": "^5.0.1",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.3.6",
+    "prettier": "^3.9.9",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.1"
+  }
+}

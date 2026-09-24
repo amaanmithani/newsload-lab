@@ -1,0 +1,42 @@
+name: CI
+on:
+  push:
+    branches: [main, "feature/**"]
+  pull_request:
+    branches: [main]
+
+# Load tests (k6) are deliberately NOT run in CI: shared runners give
+# meaningless latency numbers. Results are produced locally with `npm run lab:*`.
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: "npm" }
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run type-check
+      - run: npm run format:check
+      - name: README tables match committed results
+        run: npm run results:check
+
+  test:
+    needs: quality
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: "npm" }
+      - run: npm ci
+      - run: npm run test:coverage
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: "22", cache: "npm" }
+      - run: npm ci
+      - run: npm run build
