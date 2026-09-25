@@ -21,6 +21,20 @@ k6 load:
 > jobs), so absolute numbers are a lower bound on what the software can do and
 > the *relative* differences are the point.
 
+## Screenshots
+
+![Home page of The Daily Spike, the lab's fictional news site, listing the seeded stories](docs/img/home.png)
+
+The lab's fictional news site (seed stories from `data/seed.json`), served locally by `next start` through the edge proxy on `:8080`.
+
+![An ISR article page showing its revision and when it was rendered](docs/img/article.png)
+
+An article page (`/news/election-results-live`, ISR) through the edge proxy; the meta line shows the story revision and when Next.js rendered it.
+
+![Terminal: a 10-second, 20 req/s k6 run against the edge proxy, then the proxy's counters](docs/img/k6-edge.svg)
+
+A deliberately tiny k6 run (20 req/s for 10 s, not one of the lab scenarios) against a freshly started proxy with a cold cache, on a laptop that was busy with other jobs: 201 requests reached the proxy, 12 went upstream to Next.js, and 9 cold misses were coalesced onto in-flight fetches.
+
 ## Architecture
 
 ```text
