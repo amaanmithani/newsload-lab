@@ -1,5 +1,7 @@
 # newsload-lab — how a news site survives a breaking-news spike
 
+> **Credits.** Built by Amaan Mithani with Claude (Anthropic) as the AI coding assistant.
+
 A small, fully local lab that answers one question with measurements rather
 than folklore: **what actually keeps a news article up when everyone opens it at
 once?** It compares three ways of serving the same Next.js article page under
